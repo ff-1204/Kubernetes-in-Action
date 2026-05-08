@@ -208,59 +208,7 @@ Have a nice day! 👋
 
 ## 7. 클러스터 동작 확인
 
-세 가지 명령으로 클러스터가 정상 동작하는지 단계별로 확인합니다.
-
-> ⏳ **클러스터 생성 직후 30~60초**는 노드가 `NotReady`, 일부 파드가 `Pending`으로 보이는 게 정상입니다. CNI(`kindnet`) 초기화와 시스템 파드 기동에 시간이 필요하기 때문입니다. 잠시 기다린 뒤 아래 명령들을 다시 조회해 보세요.
->
-> ```text
-> # kubectl get nodes (직후)
-> ysmoon-control-plane   NotReady   control-plane   14s   v1.35.0
->
-> # kubectl get pods -A (직후)
-> coredns-7d764666f9-...   0/1   Pending   0   11s
-> ```
-
-### API 서버 접속 확인
-
-API 서버(컨트롤 플레인)와 클러스터 내부 DNS의 엔드포인트가 출력되면 클러스터가 응답하고 있다는 뜻입니다.
-
-```bash
-ysmoon@YSMOON:~$ kubectl cluster-info
-Kubernetes control plane is running at https://127.0.0.1:xxxxx
-CoreDNS is running at https://127.0.0.1:xxxxx/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-
-To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
-```
-
-### 노드 상태 확인
-
-클러스터에 등록된 노드(서버) 목록과 상태를 출력합니다. control-plane 노드가 `Ready` 상태로 나오면 정상입니다.
-
-```bash
-ysmoon@YSMOON:~$ kubectl get nodes
-NAME                   STATUS   ROLES           AGE     VERSION
-ysmoon-control-plane   Ready    control-plane   5m59s   v1.35.0
-```
-
-### 시스템 파드 확인
-
-`kube-system` 네임스페이스에서 컨트롤 플레인 컴포넌트 파드들이 모두 `Running` 상태인지 확인합니다.
-
-```bash
-ysmoon@YSMOON:~$ kubectl get pods -A
-NAMESPACE            NAME                                           READY   STATUS    RESTARTS   AGE
-kube-system          coredns-7d764666f9-stwtk                       1/1     Running   0          8m5s
-kube-system          coredns-7d764666f9-ts57x                       1/1     Running   0          8m5s
-kube-system          etcd-ysmoon-control-plane                      1/1     Running   0          8m10s
-kube-system          kindnet-wspvh                                  1/1     Running   0          8m5s
-kube-system          kube-apiserver-ysmoon-control-plane            1/1     Running   0          8m10s
-kube-system          kube-controller-manager-ysmoon-control-plane   1/1     Running   0          8m10s
-kube-system          kube-proxy-xhwwb                               1/1     Running   0          8m5s
-kube-system          kube-scheduler-ysmoon-control-plane            1/1     Running   0          8m12s
-local-path-storage   local-path-provisioner-67b8995b4b-bz8q4        1/1     Running   0          8m5s
-```
-
-표준 K8s 컨트롤 플레인 컴포넌트(`etcd`, `kube-apiserver`, `kube-controller-manager`, `kube-scheduler`)가 모두 `Running` 상태로 보이면 성공입니다.
+클러스터 동작 확인 절차는 [2.1 쿠버네티스 클러스터 설치 → 클러스터 정상 동작 확인](../2장.%20쿠버네티스와%20도커/2.1%20쿠버네티스%20클러스터%20설치.md#클러스터-정상-동작-확인)에 명시되어 있습니다.
 
 ---
 
