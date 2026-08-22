@@ -16,6 +16,7 @@ Kubernetes-in-Action/
 ├── images/                         # 쿠버네티스 공식 문서 이미지 (CC BY 4.0)
 │   └── README.md                   # 이미지별 원본 URL·라이선스 고지
 ├── 01장. 쿠버네티스 소개/
+│   ├── 1.0 쿠버네티스를 배우기 전에.md  # 원서에 없는 선수 지식 보충 (§3 참고)
 │   ├── 1.1 쿠버네티스 소개.md
 │   └── 1.2 쿠버네티스 이해하기.md   # 1.3(환경구축)은 SETUP.md로 통합
 ├── 02장. ~ 06장. ...               # 작성 완료 (장 번호가 원서와 다름 — §3 참고)
@@ -51,6 +52,7 @@ README.md의 "노트 작성 규칙"이 원칙이고, 아래는 실제 문서에�
 - **파일 하나 = 책의 한 개 절.** 파일명은 `<절번호> <절 제목>.md` (예: `6.2 라이브니스 프로브로 컨테이너 살려 두기.md`)
 - 문서 제목은 `# <절번호> <절 제목>`
 - **절 구성은 원서 목차를 따릅니다.** 임의로 쪼개거나 합치지 않습니다. 목차가 불확실하면 확인 후 작성합니다.
+- **예외 — `1.0 쿠버네티스를 배우기 전에.md`.** 원서에 없는 유일한 보충 절입니다. 스터디에서 쿠버네티스가 아니라 **그 아래 깔린 기초 용어**(서버/노드/클러스터, 프로세스, IP·포트·DNS, HTTP 상태 코드, 리눅스 경로, YAML 문법, 무상태/상태 유지)에서 막혀서 앞에 모았습니다. **여기는 개념 소개만 하고 본론은 각 장에 넘깁니다** — VM 비교표는 2.1, 리눅스 네임스페이스는 2.3, kubectl·선언형은 3.1, `apiVersion/kind/metadata/spec` 틀은 3장이 전담합니다. 이 원칙을 깨고 1.0을 불리지 마세요.
 - **예외 — 환경 구축 절은 쓰지 않습니다.** 원서의 1.3(kind 환경구축)과 3.1(클러스터 배포하기)에 해당하는 내용은 전부 [SETUP.md](SETUP.md)로 통합했습니다. 앞으로도 설치·클러스터 생성 이야기가 나오면 노트에 다시 쓰지 말고 SETUP.md에 넣거나 링크합니다.
 - **3.1에서 일부러 미룬 것 — 나중에 꼭 채웁니다.** 3.1은 개념만 잡는 절이라 아래를 뺐습니다. 해당 장을 쓸 때 다뤄야 합니다.
   - **네임스페이스 소속 vs 클러스터 전역** 객체 구분(`kubectl api-resources --namespaced`) → **7장**
@@ -106,6 +108,15 @@ README.md의 "노트 작성 규칙"이 원칙이고, 아래는 실제 문서에�
 npm install mermaid@11 jsdom --no-audit --no-fund
 node validate.mjs
 ```
+
+> **이 PC에는 Node.js가 설치되어 있지 않습니다(2026-08-22 확인).** podman이 있으니 컨테이너로 돌립니다. Git Bash에서는 `MSYS_NO_PATHCONV=1`을 붙여야 `-w /work`가 윈도우 경로로 변환되지 않습니다.
+>
+> ```bash
+> MSYS_NO_PATHCONV=1 podman run --rm \
+>   -v "C:/Users/dorim/Study/Kubernetes-in-Action:/repo:ro" -v "$SCRATCH:/work" -w /work \
+>   docker.io/library/node:22-alpine \
+>   sh -c "npm install mermaid@11 jsdom --no-audit --no-fund --silent >/dev/null 2>&1 && node validate.mjs /repo"
+> ```
 
 `validate.mjs` 요지 — jsdom으로 DOM을 만든 뒤 모든 `.md`의 ` ```mermaid ` 블록을 `mermaid.parse()`에 통과시킵니다.
 
