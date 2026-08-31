@@ -207,7 +207,7 @@ Windows 11 + **Podman + kind** 조합입니다. 구축 절차와 배경(왜 kind
 
 ```powershell
 podman machine start
-cd "C:\Users\moon\Project\Kubernetes-in-Action"
+cd "C:\Users\dorim\Study\Kubernetes-in-Action"
 kind delete cluster --name kia          # Exited 상태로 남은 것 정리
 kind create cluster --config kind-config.yaml
 kubectl get nodes

@@ -462,7 +462,7 @@ PC를 끄면 podman machine도 함께 내려가고, **kind 클러스터는 되�
 
 ```powershell
 podman machine start
-cd "C:\Users\moon\Project\Kubernetes-in-Action"
+cd "C:\Users\dorim\Study\Kubernetes-in-Action"
 kind delete cluster --name kia          # Exited 상태로 남은 것 정리
 kind create cluster --config kind-config.yaml
 kubectl get nodes

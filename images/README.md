@@ -10,11 +10,11 @@ CC BY 4.0에 따라 출처를 밝히면 자유롭게 사용·수정·재배포�
 
 | 파일 | 원본 URL | 사용처 |
 | :--- | :--- | :--- |
-| `container-evolution.svg` | [images/docs/Container_Evolution.svg](https://kubernetes.io/images/docs/Container_Evolution.svg) | 2.1 컨테이너 소개 |
+| `container-evolution.svg` | [images/docs/Container_Evolution.svg](https://kubernetes.io/images/docs/Container_Evolution.svg) | 1.1 쿠버네티스 소개 · 2.1 컨테이너 소개 |
 | `kubernetes-cluster-architecture.svg` | [images/docs/kubernetes-cluster-architecture.svg](https://kubernetes.io/images/docs/kubernetes-cluster-architecture.svg) | 1.2 쿠버네티스 이해하기 |
 | `module_02_first_app.svg` | [kubernetes-basics/.../module_02_first_app.svg](https://kubernetes.io/docs/tutorials/kubernetes-basics/public/images/module_02_first_app.svg) | *미사용 — 15장(디플로이먼트) 예정* |
 | `module_03_nodes.svg` | [kubernetes-basics/.../module_03_nodes.svg](https://kubernetes.io/docs/tutorials/kubernetes-basics/public/images/module_03_nodes.svg) | SETUP.md |
-| `module_03_pods.svg` | [kubernetes-basics/.../module_03_pods.svg](https://kubernetes.io/docs/tutorials/kubernetes-basics/public/images/module_03_pods.svg) | 5.1 파드 이해하기 |
+| `module_03_pods.svg` | [kubernetes-basics/.../module_03_pods.svg](https://kubernetes.io/docs/tutorials/kubernetes-basics/public/images/module_03_pods.svg) | 4.1 파드 이해하기 |
 | `module_04_labels.svg` | [kubernetes-basics/.../module_04_labels.svg](https://kubernetes.io/docs/tutorials/kubernetes-basics/public/images/module_04_labels.svg) | *미사용 — 11장(서비스) 예정* |
 | `module_05_scaling1.svg` | [kubernetes-basics/.../module_05_scaling1.svg](https://kubernetes.io/docs/tutorials/kubernetes-basics/public/images/module_05_scaling1.svg) | *미사용 — 14장(레플리카셋) 예정* |
 | `module_05_scaling2.svg` | [kubernetes-basics/.../module_05_scaling2.svg](https://kubernetes.io/docs/tutorials/kubernetes-basics/public/images/module_05_scaling2.svg) | *미사용 — 14장(레플리카셋) 예정* |

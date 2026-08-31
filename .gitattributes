@@ -1,0 +1,3 @@
+# 이 저장소는 Windows에서 작업합니다.
+# 작업 트리는 CRLF, 저장소(index)에는 LF로 저장해 줄바꿈만 바뀐 diff를 막습니다.
+* text=auto eol=crlf
