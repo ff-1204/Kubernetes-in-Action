@@ -17,7 +17,7 @@
 | [04](<04장. 파드로 애플리케이션 실행하기>) | 파드로 애플리케이션 실행하기 | Running applications with Pods | ✅ |
 | [05](<05장. 다중 컨테이너 파드와 객체 상태>) | 다중 컨테이너 파드와 객체 상태 | Running applications with Pods (계속) | ✅ |
 | [06](<06장. 파드 생명주기와 컨테이너 상태 관리>) | 파드 생명주기와 컨테이너 상태 관리 | Managing the Pod life cycle and container health | ✅ |
-| [07](<07장. 네임스페이스와 레이블로 리소스 구성하기>) | 네임스페이스와 레이블로 리소스 구성하기 | Organizing Pods and other resources using namespaces and labels | ⬜ |
+| [07](<07장. 네임스페이스와 레이블로 리소스 구성하기>) | 네임스페이스와 레이블로 리소스 구성하기 | Organizing Pods and other resources using namespaces and labels | ✅ |
 | [08](<08장. ConfigMap과 Secret으로 애플리케이션 설정하기>) | ConfigMap과 Secret으로 애플리케이션 설정하기 | Configuring applications with ConfigMaps and Secrets | ⬜ |
 | [09](<09장. 스토리지와 설정, 메타데이터를 위한 볼륨 추가하기>) | 스토리지와 설정, 메타데이터를 위한 볼륨 추가하기 | Adding volumes for storage, configuration, and metadata | ⬜ |
 | [10](<10장. PersistentVolume으로 데이터 영속화하기>) | PersistentVolume으로 데이터 영속화하기 | Persisting data with PersistentVolumes | ⬜ |
