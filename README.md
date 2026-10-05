@@ -36,17 +36,17 @@
 
 | 장 | 제목 | 원제 | 상태 |
 | :--- | :--- | :--- | :---: |
-| 08 | ConfigMap과 Secret으로 애플리케이션 설정하기 | Configuring applications with ConfigMaps and Secrets | ⬜ |
-| 09 | 스토리지와 설정, 메타데이터를 위한 볼륨 추가하기 | Adding volumes for storage, configuration, and metadata | ⬜ |
-| 10 | PersistentVolume으로 데이터 영속화하기 | Persisting data with PersistentVolumes | ⬜ |
+| [08](<08장. ConfigMap과 Secret으로 애플리케이션 설정하기>) | ConfigMap과 Secret으로 애플리케이션 설정하기 | Configuring applications with ConfigMaps and Secrets | ✅ |
+| [09](<09장. 스토리지와 설정, 메타데이터를 위한 볼륨 추가하기>) | 스토리지와 설정, 메타데이터를 위한 볼륨 추가하기 | Adding volumes for storage, configuration, and metadata | ✅ |
+| [10](<10장. PersistentVolume으로 데이터 영속화하기>) | PersistentVolume으로 데이터 영속화하기 | Persisting data with PersistentVolumes | ✅ |
 
 ### 2묶음 — 네트워킹 (11~13장)
 
 | 장 | 제목 | 원제 | 상태 |
 | :--- | :--- | :--- | :---: |
-| 11 | 서비스로 파드 노출하기 | Exposing Pods with Services | ⬜ |
-| 12 | 인그레스로 서비스에 트래픽 라우팅하기 | Using Ingress to route traffic to Services | ⬜ |
-| 13 | Gateway API로 트래픽 라우팅하기 | Routing traffic using the Gateway API | ⬜ |
+| [11](<11장. 서비스로 파드 노출하기>) | 서비스로 파드 노출하기 | Exposing Pods with Services | ✅ |
+| [12](<12장. 인그레스로 서비스에 트래픽 라우팅하기>) | 인그레스로 서비스에 트래픽 라우팅하기 | Using Ingress to route traffic to Services | ✅ |
+| [13](<13장. Gateway API로 트래픽 라우팅하기>) | Gateway API로 트래픽 라우팅하기 | Routing traffic using the Gateway API | ✅ |
 
 ### 3묶음 — 워크로드 컨트롤러 (14~16장)
 
